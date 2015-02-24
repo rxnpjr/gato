@@ -10,8 +10,14 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book= Book.new(post_params)
- 
+  	params_filtered =params.require(:book).permit(:title, :year, :publisher, :pages, :isbn, :editions)
+  	@book = Book.new(params_filtered)
+  	
+  	if @book.save
+  		redirect_to books_path
+  	else
+  		render :new
+  	end
   end
 
   def show
