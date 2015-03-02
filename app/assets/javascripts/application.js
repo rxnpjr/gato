@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.min
+//= require bootstrap.min
+//= require skrollr.min
+//= require flexslider.min
+//= require lightbox.min
+//= require twitterfetcher.min
+//= require spectragram.min
+//= require smooth-scroll.min
+//= require jquery.plugin.min
+//= require placeholders.min
+//= require countdown.min.js
+//= require scripts.js
 //= require_tree .

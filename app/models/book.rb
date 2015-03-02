@@ -7,6 +7,6 @@ class Book < ActiveRecord::Base
  # 	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
  	  	validates :title, presence: true
- 	  	validates :comments, length: { maximum: 240 }
+ 	  	# validates :comments, length: { maximum: 240 }
 
 end

@@ -1,15 +1,61 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  # get 'inventories/index'
 
-  get 'books/index'
+  # get 'inventories/new'
 
-  get 'books/new'
+  # get 'inventories/show'
 
-  get 'books/show'
+  # get 'inventories/edit'
 
-  get 'books/edit'
+  # get 'genres/index'
+
+  # get 'genres/new'
+
+  # get 'genres/show'
+
+  # get 'genres/edit'
+
+  # get 'wishlists/index'
+
+  # get 'wishlists/new'
+
+  # get 'wishlists/show'
+
+  # get 'wishlists/edit'
+
+  # get 'users/index'
+
+  # get 'users/new'
+
+  # get 'users/show'
+
+  # get 'users/edit'
+
+  # get 'bshares/index'
+
+  # get 'bshares/new'
+
+  # get 'bshares/show'
+
+  # get 'bshares/edit'
+
+  # get 'home/index'
+
+  # get 'books/index'
+
+  # get 'books/new'
+
+  # get 'books/show'
+
+  # get 'books/edit'
+
+
 
   resources :books
+  resources :users
+  resources :inventory
+  resources :wishlist
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

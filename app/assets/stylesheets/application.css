@@ -11,5 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
+ *= theme-ketchup
+ *= bootstrap.min
+ *= flexslider.min
+ *= lightbox.min
+ *= custom
  *= require_self
  */
