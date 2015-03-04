@@ -1,2 +1,17 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% if !@user.errors.empty? %>
+ <ol>
+ 	<% @user.errors.full_messages.each do |msg| %>
+ 	<li><%= msg %></li>
+ 	<% end %>
+ </ol>
+<% end %>
+
+<%= form_for @client do |f| %>
+NAME:	<%= f.text_field :name %>
+EMAIL:	<%= f.text_field :email %>
+<% unless @client.persisted? %>
+PASSWORD:	<%= f.password_field :password %>
+<% end %>
+	<%= f.submit %>
+
+<% end %>

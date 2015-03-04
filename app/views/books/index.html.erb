@@ -10,8 +10,13 @@
 		<tr>
 			<td><%= book.title %></td>
 			
-		
+		<td><%= link_to 'Ver detalle', url_for(controller: :books, action: :show, id: book.id) %> 
+				<%= link_to 'Editar usuario', edit_book_path(book) %> ..
+				<%= link_to 'Eliminar', book, method: :delete, data: {confirm: 'Está seguro?'} %>
+			</td>
 
 		</tr>
 	<% end %>
 </table>
+
+<p><%= "Existen #{@books.size} libros" %></p>
