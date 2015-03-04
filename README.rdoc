@@ -1,28 +1,33 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+                                                                        
+                        b                         .$                    
+                        4r                       .$$                    
+                        4$r                     z$$$                    
+                        $$$c                   d. $$                    
+                        $$d$$c.eeeeePeee..   z"4-'P$                    
+                       J$$$$$dP3"""*$*$$ee$$$$$ " $$F                   
+                      z$*.P*$ "- .="         '\  $$$$                   
+                    .P    'F" *e"               \/$$$                   
+                    "      4  ^                  ^ $$b                  
+                           4$%                    ^$$$r                 
+                            F                      4$$$                 
+                           4                        $$$b                
+                .    4$b   P           .ec          $$$$b               
+                     $"               4$P""         $$$$$$c             
+               ^    4$$$r 4"          4$eec        4$$$$P"*$e           
+     \         .     $$$   4          ^$$$F        $$$$$E.zd$$$"        
+      ^\       F            r                     d$$P"  *$$$P .^       
+         -.    .        %   ^.                   J$P      $$F.      /   
+              "$\    .z.      -                 $P" ^    .P      .^     
+                  ""3$$$$$$e    ".           .d"     ^   $F  -"         
+                ^   $$$$$$$$L       ^""=="""""      /   ^               
+                 -  3$ee= "$"                      /  ."                
+                  ^. ^****"                      z"  ^                  
+                                               z"  /                    
+                      -.                   .e$"  =                      
+                        ^ ec..... ....ee$$*"  .^                        
+                         ".  """**"""     .=^                           
+                              "  === """                                 
