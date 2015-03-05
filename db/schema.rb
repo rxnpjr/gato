@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303224253) do
+ActiveRecord::Schema.define(version: 20150305220614) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -95,19 +95,21 @@ ActiveRecord::Schema.define(version: 20150303224253) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "unconfirmed_email"
+    t.string   "confirmation_token"
+    t.string   "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "wishlists", force: :cascade do |t|
-    t.integer  "book_id_id"
-    t.integer  "user_id_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "users_id"
+    t.integer  "book_id"
   end
-
-  add_index "wishlists", ["book_id_id"], name: "index_wishlists_on_book_id_id"
-  add_index "wishlists", ["user_id_id"], name: "index_wishlists_on_user_id_id"
 
 end
