@@ -14,7 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 
-
+# Gema para hacer la busqueda voz roxana
+gem 'ransack'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

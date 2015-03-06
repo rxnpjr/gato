@@ -1,20 +1,25 @@
 <h1>Lista de libros</h1>
 
+<h1>Este es el buscador</h1>
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :title %>
+  <%= f.search_field :title %>
+
+  <%= f.submit %>
+<% end %>
+
 <table>
 	<tr>
 		<th>Título</th>
-	
 	</tr>
-	<% @books.each do |book| %>
-
+	<% @book.each do |book| %>
 		<tr>
 			<td><%= book.title %></td>
-			
-		<td><%= link_to 'Ver detalle', url_for(controller: :books, action: :show, id: book.id) %> 
+			<td><%= link_to 'Ver detalle', url_for(controller: :books, action: :show, id: book.id)%> 
 				<%= link_to 'Editar usuario', edit_book_path(book) %> ..
 				<%= link_to 'Eliminar', book, method: :delete, data: {confirm: 'Está seguro?'} %>
 			</td>
-
 		</tr>
 	<% end %>
 </table>
