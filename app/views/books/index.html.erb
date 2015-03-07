@@ -1,7 +1,7 @@
 <h1>Lista de libros</h1>
 
 <h1>Este es el buscador</h1>
-<%= search_form_for @q do |f| %>
+<%= search_form_for @search do |f| %>
 
   <%= f.label :title %>
   <%= f.search_field :title %>
@@ -13,7 +13,7 @@
 	<tr>
 		<th>Título</th>
 	</tr>
-	<% @book.each do |book| %>
+	<% @books.each do |book| %>
 		<tr>
 			<td><%= book.title %></td>
 			<td><%= link_to 'Ver detalle', url_for(controller: :books, action: :show, id: book.id)%> 

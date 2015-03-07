@@ -1,13 +1,15 @@
 class BooksController < ApplicationController
  
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /posts
   # GET /posts.json
   def index
+    
     @user = current_user
-    @q = Book.search(params[:q])
-    @books = @q.result
+    @search = current_user.books.search(params[:q])
+    @books = @search.result
   end
 
   # GET /posts/1
@@ -27,8 +29,8 @@ class BooksController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
- 
-    @book = Book.new(book_params)
+    @user = current_user
+    @book = current_user.books.new(book_params)
 
     respond_to do |format|
       if @book.save
@@ -60,7 +62,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to books_url }
       format.json { head :no_content }
     end
   end
