@@ -1,57 +1,6 @@
 Rails.application.routes.draw do
+  
   devise_for :users
-  # get 'inventories/index'
-
-  # get 'inventories/new'
-
-  # get 'inventories/show'
-
-  # get 'inventories/edit'
-
-  # get 'genres/index'
-
-  # get 'genres/new'
-
-  # get 'genres/show'
-
-  # get 'genres/edit'
-
-  # get 'wishlists/index'
-
-  # get 'wishlists/new'
-
-  # get 'wishlists/show'
-
-  # get 'wishlists/edit'
-
-  # get 'users/index'
-
-  # get 'users/new'
-
-  # get 'users/show'
-
-  # get 'users/edit'
-
-  # get 'bshares/index'
-
-  # get 'bshares/new'
-
-  # get 'bshares/show'
-
-  # get 'bshares/edit'
-
-  # get 'home/index'
-
-  # get 'books/index'
-
-  # get 'books/new'
-
-  # get 'books/show'
-
-  # get 'books/edit'
-
-
-
   resources :books
   resources :users
   resources :inventory
