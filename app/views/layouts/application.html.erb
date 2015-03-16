@@ -5,26 +5,38 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-          <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic" rel="stylesheet" type="text/css">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- cosas raras de roxo -->
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60506320-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
 </head>
 <body>
 
-	 <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
-<nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#">librora</a></h1>
-          </li>
-           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li class= "divider"></li>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right">
+            
             <% if user_signed_in? %>
             <li>
               <%= link_to current_user.email, edit_user_registration_path %>
@@ -33,7 +45,7 @@
               <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
             </li>
             <% else %>
-              <li class="active">
+              <li >
               <%= link_to 'Sign Up', new_user_registration_path %>
             </li>
             <li>
@@ -42,73 +54,59 @@
             <% end %>
           </ul>
 
-          <!-- Left Nav Section -->
-          <ul class="left">
-            <li class= "divider"></li>
-            
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+
+
             
           </ul>
         </section>
       </nav>
 <%= yield %>
-	<footer class="footer-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2 col-sm-3">
-                            <img alt="logo" class="logo" src="https://dl.dropboxusercontent.com/u/3190329/librora_img/logo-square-red.png">
-<!--							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms + Conditions</a></li>
-								<li><a href="#">Pricing</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>-->
-						</div>
-					
-						<div class="col-md-2 col-sm-3">
-							<ul>
-								<li><a href="#">Twitter</a></li>
-								<li><a href="#">Facebook</a></li>
-                                <li><a href="#">Instagram</a></li>
-								<li><a href="#">lalleca</a></li>
-								<li><br></li>
-								<li><br></li>
-							</ul>
-						</div>
-					
-						<div class="col-md-offset-4 col-sm-6 col-md-4">
-							<p style="color: #ff5c61">
-								Librora es una plataforma privada, que funciona bajo invitación. Sé el primero en enterarte de todas nuestras novedades:&nbsp;</p>
-						
-							
-							<form  class="newsletter-form" action="//librora.us10.list-manage.com/subscribe/post?u=be7ef25bf260b9fbdb0e7a199&amp;id=dd97e95e8d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						    <div id="mc_embed_signup_scroll">
-					
-							<input type="email" value="" name="EMAIL" class="validate-required validate-email input-standard" id="mce-EMAIL" placeholder="Escribe tu email"required>
-						    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						    <div style="position: absolute; left: -5000px;"><input type="text" name="b_be7ef25bf260b9fbdb0e7a199_dd97e95e8d" tabindex="-1" value=""></div>
-						    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-						    </div>
-						</form>
-
-					
+	<footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
-							
-								<!-- <i class="icon pe-7s-angle-right text-white"></i> -->
-							
-						</div>
-					</div>
-				
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-lower">
-								<span>© Copyright 2015 Librora - Hecho con</span><i class="icon pe-7s-like"></i> por gatos amaestrados.
-							</div>
-						</div>
-					</div>
-				
-				</div>
-			</footer>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by gatos</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

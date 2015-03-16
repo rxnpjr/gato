@@ -12,11 +12,5 @@
  *
  *= require_tree .
 
- *= theme-ketchup
- *= bootstrap
- *= font-libre
- *= flexslider
- *= lightbox
- *= custom
  *= require_self
  */
